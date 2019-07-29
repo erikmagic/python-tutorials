@@ -3,3 +3,6 @@ seaborn
 pandas
 jupyterlab
 jupyter
+ipython
+matplotlib
+numpy
