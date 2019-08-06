@@ -6,3 +6,4 @@ jupyter
 ipython
 matplotlib
 numpy
+statsmodels
