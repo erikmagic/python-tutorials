@@ -5,14 +5,11 @@ from utilities import StringConverters
 # scope='module' signifie que le fixture est disponible pour les tests dans ce
 # script seulement et est appelé seulement une fois dans ce module (et non à
 # chaque fonction). 
-# autouse=True signifie que cet fixture est automatiquement appelé avant le
-# premier test exécuté dans ce module (puisque le scope='module', si le
-# scope='function' cette fixture aurait été appelé avant chaque fonction
-# individuelle dans ce module. 
-@pytest.fixture(autouse=True, scope='module')
+
+@pytest.fixture(scope='module')
 def create_converter():
     converter = StringConverters()
-    yield converter
+    return converter
 
 def test_translate_to_jadensmith_raises_value_error(create_converter):
     with pytest.raises(ValueError):
@@ -21,7 +18,7 @@ def test_translate_to_jadensmith_raises_value_error(create_converter):
 def test_translate_to_jadensmith_single_word(create_converter):
     sentence = "bonjour"
     expected_value = "Bonjour"
-
+    
     actual_value = create_converter.translate_to_jadensmith(sentence)
 
     assert expected_value == actual_value

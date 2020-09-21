@@ -13211,7 +13211,7 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The purpose of this tutorial is to clarify certain concepts related to testing in
 programming and to emphasize good insurance practices
-quality in Python. We will also investigate how to profile its code.
+quality in Python. We will also investigate how to profile its code in order
 to determine performance.</p>
 
 </div>
@@ -13247,10 +13247,10 @@ destroyed.</li>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Un test unitaire est généralement conçu afin d'isoler une unité de code. Il
-est important de découpler les tests unitaires.   Nous allons commencer par
-nous habituer à la structure générale des tests. Le premier exemple est le
-script <code>utilities.py</code> et sa classe de tests dans <code>test_utilities.py</code>.</p>
+<p>A unit test is generally designed to isolate a unit of code. It
+is important to decouple unit tests.   We will start with
+get used to the general structure of the tests. The first example is the
+script <code>utilities.py</code> and its test class in <code>test_utilities.py</code>.</p>
 
 </div>
 </div>
@@ -13339,7 +13339,7 @@ The file is <em>test_utilities_refactored.py</em>.</p>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">autouse</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">scope</span><span class="o">=</span><span class="s1">&#39;module&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">scope</span><span class="o">=</span><span class="s1">&#39;module&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">create_converter</span><span class="p">():</span>
     <span class="n">converter</span> <span class="o">=</span> <span class="n">StringConverters</span><span class="p">()</span>
     <span class="k">yield</span> <span class="n">converter</span>

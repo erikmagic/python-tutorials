@@ -8,13 +8,21 @@ class StringConverters:
         Karate Kid (2010) et After Earth (2013). Jaden est également connu pour une
         partie de sa philosophie qu'il diffuse sur Twitter. Lorsqu'il écrit sur
         Twitter, il est connu pour mettre presque toujours en majuscule chaque mot.
-        Pour plus de simplicité, vous devrez mettre chaque mot en majuscule. Voyez
-        comment les contractions sont prévues dans l'exemple ci-dessous.
 
         Votre tâche consiste à convertir les chaînes de caractères pour qu'elles
         correspondent à la façon dont Jaden Smith les écrirait. Les chaînes sont de
         véritables citations de Jaden Smith, mais elles ne sont pas mises en
         majuscules de la même manière que celle qu'il a tapée à l'origine.
+        
+        Jaden Smith, Will Smith's son, stars in films such as The
+        Karate Kid (2010) and After Earth (2013). Jaden is also known for a
+        part of his philosophy that he spreads on Twitter. When he writes on
+        Twitter is known to almost always capitalize every word.
+
+        Your task is to convert the strings so that they are
+        correspond to the way Jaden Smith would write them. The chains are from
+        real quotes from Jaden Smith, but they are not put into words.
+        capital letters in the same way he originally typed.
         
         [source: codewars.com]
 
@@ -26,6 +34,7 @@ class StringConverters:
         -------
         string
             la même phrase en entré, mais avec la traduction en jadensmith.
+            the same sentence, but "translated"
 
         Raises
         ------
@@ -46,6 +55,8 @@ class StringConverters:
         """
         Cette fonctione traduit une phrase en phrase meme de l'internet, par exemple:
         'bOnJoUr CoMmEnT cA vA?`
+        
+        This function translate a sentence into an internet meme.
 
         Parameters
         ----------
@@ -86,7 +97,16 @@ class StringConverters:
         MM = minutes, avec 2 chiffres, plage : 00 - 59
         SS = secondes, avec 2 chiffres, plage : 00 - 59
         Le temps maximum ne dépasse jamais 359999 (99:59:59)
-
+        
+        Write a function that takes an nonnegative integer as input (seconds)
+        and returns the time in an intelligible format (HH:MM:SS)
+        
+        HH = hours, 2 numbers: from 00-99
+        MM = minutes, 2 numbers: from 00-59
+        SS = seconds, 2 numbers: from 00 to 59
+        Maximal time won't go above 359999.
+        
+        
         Parameters
         ----------
         seconds: int
@@ -96,6 +116,7 @@ class StringConverters:
         -------
         str
             une représentation lisible du nombre de secondes
+            an intelligible representation of the number of seconds.
 
         Raises
         ------
